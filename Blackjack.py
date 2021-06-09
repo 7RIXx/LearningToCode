@@ -75,7 +75,7 @@ class Dealer:
         self.name = "Dealer"
 
     def __str__(self):
-        return f"a stone-faced and suspiciously witty Blackjack dealer who will now take all your monies"
+        return f"a suspiciously witty Blackjack dealer who will now take all your monies"
 
     def hit(self):
         # Take one card from the top of the deck and add it to the player's hand
@@ -83,8 +83,8 @@ class Dealer:
         self.hand.append(card_deck.get_card())
 
     def add_to_hand(self, card):
-        self.card = card
-        self.hand.append(self.card)
+        card = card
+        self.hand.append(card)
         
     def show_hand(self):
         print(f"\n\nDealer's Hand: \n{self.hand}\n")
@@ -128,7 +128,6 @@ class Table:
         # Perhaps this will also contain the logic which can deal with aces
         # This will only return a sum; the actual comparison for win will be in main loop
         hand_to_check = someone.hand
-        name_of_player = someone.name
         size_of_hand = len(hand_to_check)
         # We want to take in the hand -- a list --
         # For loop adds each element to a sum and IF the element is an ace increases another counter
@@ -177,8 +176,6 @@ sleep(10)
 print("\r\n" * 100)
 
 
-
-
 # MAIN LOGIC LOOP
 
 while the_player.bank > 0:
@@ -207,19 +204,19 @@ while the_player.bank > 0:
         while not stood or player_sum > 21:
             # Each hit, clear screen and post one dealer card and all player cards
             # Also store sum in a variable
-            # While hitorstay not in list[n,y,no,yes,No,Yes,NO,YES,N,Y] request input
-            answer_list = ["n","y","no","yes","No","Yes","NO","YES","N","Y"]
-            yes_list = ["y","yes","Yes","YES","Y"]
-            no_list = ["n","no","No","NO","N"]
+            # While hit_or_stay not in answer_list request input
+            answer_list = ["n", "y", "no", "yes", "No", "Yes", "NO", "YES", "N", "Y"]
+            yes_list = ["y", "yes", "Yes", "YES", "Y"]
+            no_list = ["n", "no", "No", "NO", "N"]
             hit_or_stay = "temp"
-            while not hit_or_stay in answer_list:
+            while hit_or_stay not in answer_list:
                 try:
                     the_dealer.show_hand_hidden()
                     the_player.show_hand()
                     hit_or_stay = input("Would you like to hit that? ")
                     print("\r\n" * 100)
 
-                except:
+                except TypeError:
                     print("Invalid response, please try again\n")
 
             if hit_or_stay in yes_list and not player_sum > 21:
@@ -242,15 +239,14 @@ while the_player.bank > 0:
             target = 21
 
         while dealer_sum < target:
-                if player_sum > 21:
-                    break
-                else:
-                    the_dealer.hit()
-                    dealer_sum = table.check_cards(the_dealer)
-                    sleep(2)
-                    print("\r\n" * 100)
-                    the_dealer.show_hand()
-
+            if player_sum > 21:
+                break
+            else:
+                the_dealer.hit()
+                dealer_sum = table.check_cards(the_dealer)
+                sleep(2)
+                print("\r\n" * 100)
+                the_dealer.show_hand()
 
         # Compare dealer_sum and player_sum
         # If (player_sum <= 21) and (player_sum > dealer_sum) then
