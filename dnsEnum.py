@@ -81,7 +81,7 @@ while h.lower() not in accept:
         
 if h.lower() == 'http':
     h = 'http://'
-elif h == 'https' or 'HTTPS' or 'Https':
+elif h.lower() == 'https':
     h = 'https://'
 
 mylist = f.readlines()
