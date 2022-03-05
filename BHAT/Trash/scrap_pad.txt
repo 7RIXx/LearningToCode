@@ -1,0 +1,54 @@
+#!/bin/python3
+
+from PhysicalNarrative.holds_physical_defs import get_inv as startit
+
+startit()
+
+
+'''
+
+# get choice snippet
+
+
+	options = ['1']
+	choice = 'xxx'
+	while choice not in options:
+		choice = input('	>> ')
+	if choice == '1':
+		cls()
+		xxxxx
+		
+		
+'''
+
+'''
+
+# death or incarcerated snippet
+
+
+	if 'blankets' in pers_inv:
+		space()
+		sleep(3)
+		forest_fence_have_blanket_text()
+	else:
+		space()
+		sleep(3)
+		forest_fence_no_blanket_text()
+		sleep(3)
+		deciding = 'xxx'
+		while deciding:
+			again = input('	>> ')
+			again = list(str(again))
+			if again[0].lower() == 'y':
+				cls()
+				get_inv()
+			elif again[0].lower() == 'n':
+				cls()
+				exit()
+			else:
+				space()
+				print("	Invalid selection")
+				space()
+'''
+
+
