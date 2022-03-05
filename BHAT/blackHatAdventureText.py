@@ -48,63 +48,6 @@ intro = '''
 	
 	'''
 
-# classes and funcs
-
-class Player:
-	# holds player name and player inventory
-	def __init__(self, whoami, backpack):
-		self.whoami = whoami
-		self.backpack = backpack
-		
-def get_player():
-	# gets vars to assign to player object
-	pname = input('''
-	
-	What is your name/handle? 
-	
-	>>> ''')
-	
-	return pname
-		
-	
-def get_inv():
-	# bulk dict which personal inventory of four items will be chosen from
-	cls()
-
-	item_dict = {0:'badge cloner', 1:'blanket', 2:'raspberry pi', 3:'lockpicks', 4:'rope', 5:'cigarettes', 6:'snake camera', 7:'door shim', 8:'voice modulator', 9:'fake credentials', 10:'mars bar', 11:'rubber ducky'}
-	pers_inv = []
-	
-	print('''
-	Please choose four items to take with you from this 
-	list, choose them by their assigned name and select 
-	one item at a time: ''')
-	space()
-	print(item_dict)
-	space()
-	
-	
-	while len(pers_inv) != 4:
-		x = input("I choose: ")
-		if x.lower() in item_dict.values():
-			pers_inv.append(x)
-			cls()
-			space()
-			print("Current items: " + str(pers_inv))
-			space()
-			print(item_dict)
-			space()
-		elif x not in item_dict.keys():
-			cls()
-			space()
-			print("Invalid selection.")
-			space()
-			print("Current items: " + str(pers_inv))
-			space()
-			print(item_dict)
-			space()
-
-	return pers_inv
-
 
 
 	
