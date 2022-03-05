@@ -13,9 +13,6 @@
 from time import sleep
 import PhysicalNarrative.holds_physical_defs as pnd
 
-# RELIC FROM ATTEMPTING TO SOLVE FOR QUESTION TWO
-import os
-
 
 # set globals
 
