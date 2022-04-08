@@ -1,12 +1,8 @@
 #!/bin/python3
 
-### ATTN 7R!Xx -- LEARN HOW TO USE THE COLOR MODULE (CRAYONS.PY) AND LEVERAGE THIS FEATURE IN MAIN ###
-
 # PROMPT: CREATE A TEXT-ADVENTURE WHERE THE PLAYER CHOOSES HOW TO MOVE THROUGHOUT A HOUSE OF ROOMS OR SIMILAR STRUCTURE
 
 # Plan: Make a story of branching choices via Mindly mind-mapping app, certain choices will require items, items are chosen from a list at the beginning; set a character class to hold the items; each decision/location/piece-of-narrative is its own function and the functions simply call on each other
-
-# TODO: write the digital narrative /// put play_again feature in its own function /// put get_decision feature into its own function -- will require logic to determine the number of options available /// add user control for continue story rather than using sleep /// add sub-options to the 'guess' option in the final point of the physical narrative /// add 'go back' options to more of the areas /// add the option on play_again to re-choose inventory or leave as is
 
 # set imports
 
