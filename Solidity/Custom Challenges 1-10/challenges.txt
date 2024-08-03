@@ -1,0 +1,11 @@
+### Difficulty 1-10
+1. **Hello World**: Create a simple contract that stores a string message set during deployment.
+2. **Simple Storage**: Create a contract to store and retrieve an unsigned integer.
+3. **Basic Counter**: Implement a counter that can be incremented and decremented.
+4. **Boolean Flag**: Create a contract with a boolean flag that can be toggled.
+5. **User Greeting**: Store and retrieve a personalized greeting for users.
+6. **Basic Array**: Implement a contract that stores and retrieves values from an array.
+7. **Mapping Storage**: Create a contract that stores user balances using a mapping.
+8. **Multi-user Greetings**: Store and retrieve greetings for multiple users.
+9. **Voting System**: Implement a basic voting system where users can vote once.
+10. **String Manipulation**: Create functions to concatenate and compare strings.
